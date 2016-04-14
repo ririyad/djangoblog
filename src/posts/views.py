@@ -8,11 +8,24 @@ from django.shortcuts import render
 def post_create(request):
     return HttpResponse("<h2>Create</h2>")
 
+
 def post_detail(request): # retrieve
     return HttpResponse("<h2>Detail</h2>")
 
+
 def post_list(request):
-    return render(request, "index.html", {})
+    context = {
+        "title": "List"
+    }
+    # if request.user.is_authenticated():
+    #     context = {
+    #         "title": "My user list!"
+    #     }
+    # else:
+    #     context = {
+    #         "title": "Just a list!"
+    #     }
+    return render(request, "index.html", context)
 
 def post_update(request):
     return HttpResponse("<h2>Update</h2>")
