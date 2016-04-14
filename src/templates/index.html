@@ -3,6 +3,17 @@
 <head>
 </head>
 <body>
-  <h3> {{ title }} </h3>
+  <h3> {{ title }} is working </h3>
+
+  {% for obj in object_list %}
+
+  {{ obj.title }}<br/>
+  {{ obj.content }}<br/>
+  {{ obj.timestmp }}<br/>
+  {{ obj.updated }}<br/>
+  {{ obj.id }}<br/>
+
+  {% endfor %}
+
 </body>
 </html>
