@@ -6,4 +6,4 @@ from django.shortcuts import render
 # Here I am creating function-based views
 
 def post_home(request):
-    return HttpResponse("<h1>Hello!</h1>")
+    return HttpResponse("<h2>Hello!</h2>")
