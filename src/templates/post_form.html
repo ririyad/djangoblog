@@ -1,13 +1,11 @@
-<!--DOCTYPE html-->
-<html>
-<head>
+{% extends "base.html" %}
 
-</head>
-<body>
+{% block content %}
+{{ block.super }}
   <h3>Form</h3>
 <form method="POST" action="">{% csrf_token %}
   {{ form.as_p }}
   <input type="submit" value = "Create Post" />
 </form>
-</body>
-</html>
+
+{% endblock content %}

@@ -17,16 +17,8 @@ def post_create(request):
         messages.success(request, "Successfully Created")
         return HttpResponseRedirect(instance.get_absolute_url())
 
-    # if request.method == "POST":
-    #     print request.POST.get("content")
-    #     print request.POST.get("title")
-        context = {
-            "form": form,
-            }
-    else:
-        messages.error(request, "Not Successfully Created")
-        context = {
-            "form": form
+    context = {
+        "form": form
         }
 
     return render(request, "post_form.html", context)
@@ -56,7 +48,7 @@ def post_list(request):
     #     context = {
     #         "title": "Just a list!"
     #     }
-    return render(request, "index.html", context)
+    return render(request, "post_list.html", context)
 
 
 def post_update(request, id=None):
