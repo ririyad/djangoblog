@@ -8,8 +8,17 @@
     {% endif %}
 
     <h3> {{ title }} <small>{{ instance.timestmp }}</small></h3>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri}}m/">
+Facebook
+    </a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri}}&title={{ instance.title }}&summary={{ share_string}}&source={{ request.build_absolute_uri}}">
+Linkedin
+    </a>
   {{ instance.content| linebreaks }}<br/>
-<br/>
-  </div>
+
+    </div>
+
 
 {% endblock content %}
